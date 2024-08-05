@@ -1,0 +1,173 @@
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  .icon--arrow {
+    margin-left: auto;
+
+    @include laptop {
+      margin: 0;
+    }
+  }
+
+  @include laptop {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.nav__item {
+  @include laptop {
+    position: relative;
+  }
+}
+
+.nav__btn {
+  color: #9197b3;
+  font-size: 14px;
+  letter-spacing: -0.14px;
+
+  width: 100%;
+  padding: 11px 8px 11px 11px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  border-radius: 8px;
+
+  transition: all ease-in 0.3s;
+
+  cursor: pointer;
+
+  .icon--arrow {
+    transform: rotate(0deg);
+  }
+
+  &:hover {
+    color: white;
+    background-color: lightblue;
+
+    @include laptop {
+      color: #000;
+      background-color: inherit;
+    }
+
+  }
+
+  &:hover .icon {
+    stroke: white;
+
+    @include laptop {
+      stroke: #000;
+    }
+  }
+
+  &.active {
+    margin-bottom: 18px;
+    background-color: #5932ea;
+
+    @include laptop {
+      background-color: transparent;
+      margin-bottom: 0;
+    }
+  }
+
+  &.active .icon,
+  &.active {
+    stroke: white;
+    color: white;
+
+    @include laptop {
+      color: #000;
+      stroke: #000;
+    }
+  }
+
+  &.active .icon--arrow {
+    transform: rotate(90deg);
+  }
+
+  &.active + .nav__sub-wrapper {
+    max-height: 200px;
+
+    @include laptop {
+      top: 63px;
+    }
+  }
+
+  @include laptop {
+    align-items: center;
+    padding: 8px 0;
+    gap: 15px;
+
+    .icon {
+      display: none;
+    }
+
+    .icon--arrow {
+      display: inline;
+    }
+  }
+
+}
+
+.nav__sub-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: all ease-in 0.3s;
+  
+  @include laptop {
+    width: 100%;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+
+.nav__sub-list {
+  display: grid;
+  gap: 18px;
+
+  @include laptop {
+    gap: 5px;
+  }
+}
+
+.nav__sub-item {
+  padding: 8px 10px 8px 49px;
+  transition: background-color ease-in 0.3s;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lightblue;
+
+    .nav__sub-link {
+      color: white;
+    }
+  }
+
+  @include laptop {
+    border-radius: 0;
+    padding: 5px 0;
+    text-align: center;
+    border: 2px solid #d1d1d1;
+    background-color: #fff;
+  }
+}
+
+.nav__sub-link {
+  color: #292d32;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color ease-in 0.3s;
+
+
+}

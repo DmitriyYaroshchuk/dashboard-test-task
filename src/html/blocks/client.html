@@ -1,0 +1,46 @@
+<section class="client">
+  <div class="container">
+    <h3 class="client__greeting">Hello Evano 👋🏼,</h3>
+    <div class="client__wrapper">
+      <div class="client__inner">
+        <div class="client__row-top">
+          <div class="client__intro">
+            <h1 class="client__title">All Customers</h1>
+            <p class="client__members-status">Active Members</p>
+          </div>
+          <div class="client__wrapper-search">
+            <input class="client__input-search" type="search" name="search" id="search" placeholder="search" />
+          </div>
+        </div>
+        @@include('table.html')
+        <div class="client__row-bottom">
+          <p class="client__text">Showing data 1 to 8 of  256K entries</p>
+          <div class="client__nav">
+            <button class="client__btn"><</button>
+            <ul class="client__list-pagination">
+              <li class="client__item-pagination">
+                <button class="client__btn-pagination active">1</button>
+              </li>
+              <li class="client__item-pagination">
+                <button class="client__btn-pagination">2</button>
+              </li>
+              <li class="client__item-pagination">
+                <button class="client__btn-pagination">3</button>
+              </li>
+              <li class="client__item-pagination">
+                <button class="client__btn-pagination">4</button>
+              </li>
+              <li class="client__item-pagination">
+                <button class="client__btn-pagination">...</button>
+              </li>
+              <li class="client__item-pagination">
+                <button class="client__btn-pagination">40</button>
+              </li>
+            </ul>
+            <button class="client__btn">></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

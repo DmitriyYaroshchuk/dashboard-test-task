@@ -1,0 +1,91 @@
+.header {
+  grid-area: sitebar;
+}
+.header__container-inner {
+  padding: 36px 28px 76px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 53px;
+  height: 100%;
+
+  @include laptop {
+    padding: 20px var(--container-padding);
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    height: auto;
+  }
+
+  @include tablet {
+    align-items: center;
+  }
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @include laptop {
+    gap: 0;
+  }
+}
+
+.header__logo-img {
+  width: 37px;
+  height: 37px;
+}
+
+.header__logo-title {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.26px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  color: #000000;
+
+  @include laptop {
+    font-size: 18px;
+  }
+}
+
+.header__logo-version {
+  color: #838383;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: -0.1px;
+}
+
+.header__profile {
+  margin-top: auto;
+  display: flex;
+  justify-items: center;
+  gap: 12px;
+  
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.header__profile-info {
+  @include laptop {
+    display: none;
+  }
+}
+
+.header__profile-link {
+  display: inline-block;
+}
+
+.header__profile-name {
+  font-size: 14px;
+  letter-spacing: 0.14px;
+}
+.header__profile-position {
+  color: #757575;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12px;
+}
